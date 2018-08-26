@@ -1,0 +1,14 @@
+th, td {
+    padding: 80px;
+    text-align: center;
+
+}
+.boarder-left{
+    border-left: 3px solid;
+}
+.boarder-right{
+    border-right: 3px solid;
+}
+.boarder-bottom{
+    border-bottom: 3px solid;
+}
