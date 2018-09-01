@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!--For responsive web page-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--boostrap styling-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--bootstrap scripting-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="JAVA.js"></script>
     <title>Rock-Paper-Scissors</title>
 </head>
-
+<!--css styling-->
 <style>
     #finalResult {
-        width: 320px;
-        height: auto;
+        width: 720px;
+        height: 200px;
         padding: 10px;
         border: 5px solid gray;
         margin: 0;
         background-color: white;
+        font-size: 30px;
     }
 </style>
 
@@ -27,10 +34,10 @@
 
 <!-- Asking for User Choice through a Text Box -->
 <br/><br/>
-<div align="center">
-    <label style="color: red">Enter Your Input (Rock/Scissors/Paper) : </label>
-    <input type="text" id="userInput"/>
-    <button onclick="rps()">Get my Result !!</button>
+<div  align="center">
+    <label style="color: red; font-size: 30px">Enter Your Input (Rock/Scissors/Paper) : </label>
+    <input style="font-size: 20px" type="text" id="userInput"/>
+    <button style="font-size: 20px" onclick="rps()">Get my Result !!</button>
     <br/><br/><br/>
     <div align="center" id="finalResult" style="display: none">
     </div>

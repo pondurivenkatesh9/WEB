@@ -6,6 +6,7 @@ function rps() {
     }else{
         <!-- Getting Random Choice -->
         var randomChoice = Math.random();
+        console.log (randomChoice);
         // Based on the Random Choice hardcoding systems selection
         if (randomChoice < 0.34) {
             randomChoice = "rock";
