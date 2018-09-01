@@ -1,51 +1,52 @@
-var userChoice = "";
-var userChoice = prompt("Choose rock, paper, or scissors");
-var playagain = "Y";
-var computerChoice = Math.random();
-
-if (computerChoice < 0.34) {
-    computerChoice = "rock";
-} else if (computerChoice <= 0.67) {
-    computerChoice = "paper";
-} else {
-    computerChoice = "scissors";
-}
-
-choice1 = userChoice;
-choice2 = computerChoice;
-
-while (playagain == "Y") {
-    function compare(choice1, choice2) {
-
-        if (choice1 == choice2) {
-            return ("It's a tie!");
+function rps() {
+    var userInput = $("#userInput").val();
+    $("#finalResult").hide();
+    if(userInput == null || userInput == ''){
+        alert("Input text cannot be Null/Empty and it should be one of Rock/Scissors/Paper")
+    }else{
+        <!-- Getting Random Choice -->
+        var randomChoice = Math.random();
+        // Based on the Random Choice hardcoding systems selection
+        if (randomChoice < 0.34) {
+            randomChoice = "rock";
+        } else if(randomChoice >= 0.34 && randomChoice <= 0.67) {
+            randomChoice = "paper";
+        } else {
+            randomChoice = "scissors";
         }
-        if (choice1 == "rock") {
-            if (choice2 == "scissors") {
-                return ("You win!", choice2);
-
-            } else {
-                return ("computer wins!");
+        // Comparing now between user input and system choice
+        var userInputLower = userInput.toLowerCase();
+        $("#finalResult").html("Your Choice : "+userInputLower.toUpperCase()+ "<br/> System Choice : "+randomChoice.toUpperCase()
+            +"<br/>");
+        // Tie
+        if(userInputLower == randomChoice){
+            $("#finalResult").append("<strong>It's a Tie..</strong>");
+        }else {
+            // Rock, Scissors Scenario
+            if (userInputLower == "rock") {
+                if (randomChoice == "scissors") {
+                    $("#finalResult").append("<strong>You WIN !!!</strong>");
+                } else {
+                    $("#finalResult").append("<strong>You Lose, Try Again</strong>");
+                }
+            }
+            // Paper, Rock Scenario
+            if (userInputLower == "paper") {
+                if (randomChoice == "rock") {
+                    $("#finalResult").append("<strong>You WIN !!!</strong>");
+                } else {
+                    $("#finalResult").append("<strong>You Lose, Try Again</strong>");
+                }
+            }
+            // Scissors, Paper scenario
+            if (userInputLower == "scissors") {
+                if (randomChoice == "paper") {
+                    $("#finalResult").append("<strong>You WIN !!!</strong>");
+                } else {
+                    $("#finalResult").append("<strong>You Lose, Try Again</strong>");
+                }
             }
         }
-        if (choice1 == "paper") {
-            if (choice2 == "rock") {
-                return ("you win!");
-            } else {
-                return ("computer wins!");
-            }
-        }
-        if (choice1 == "scissors") {
-            if (choice2 == "rock") {
-                return ("computer wins!");
-            } else {
-                return ("you win!");
-            }
-        }
+        $("#finalResult").show();
     }
-
-    document.write(compare(choice1, choice2));
-    document.write("<br>");
-    playagain = prompt("Do you want to play again, Y or N");
-    userChoice = prompt("Choose rock, paper, or scissors");
 }
