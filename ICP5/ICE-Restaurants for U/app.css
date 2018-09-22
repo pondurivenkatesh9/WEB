@@ -1,0 +1,57 @@
+/* app css stylesheet */
+
+.menu {
+  list-style: upper-latin;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.tblSpan
+{
+  width:200px;
+  height:auto;
+  margin:20px 20px 20px 20px;
+
+}
+.menu input {
+  width: 300px;
+  background: transparent;
+  border: 2px solid #1ab188;
+  border-radius: 4px;
+  color: #5e5e5e;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.menu button {
+  width: 419px;
+  height: 40px;
+  background: #1ab188;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: 'Exo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 6px;
+  margin-top: 10px;
+}
+
